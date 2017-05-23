@@ -6,7 +6,7 @@ use App\Models\dinner;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
-use App\Http\Requests;
+ use App\Http\Requests;
 use Illuminate\Support\Facades\View;
 use DB;
 
@@ -44,7 +44,7 @@ class DinnerController extends Controller
       $dinner->Dname = Input::get('Dname');
       $dinner->Dcalories = Input::get('Dcalories');
       $dinner->save();
-     return redirect('adminInsert');
+     return "seccess";
     }
 
     /**

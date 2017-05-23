@@ -36,6 +36,9 @@ Route::get('/cal', 'HomeController@cal');
 
 //addMenu
 Route::get('/add','PagesController@add');
+
+//FoodCalculate
+Route::get('/food', 'HomeController@foodcal');
 //
 use App\Models\chart;
 Route::get('/chart', function () {

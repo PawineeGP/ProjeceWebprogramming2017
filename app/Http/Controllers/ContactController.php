@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\breakfast;
+use App\Model\contact;
 use App\Http\Controllers\Controller;
+use App\Http\Requests;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
-use App\Http\Requests;
 use Illuminate\Support\Facades\View;
 use DB;
-class BreakfastController extends Controller
+
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,7 +19,7 @@ class BreakfastController extends Controller
      */
     public function index()
     {
-      return view("insertBreak");
+        //
     }
 
     /**
@@ -39,11 +40,12 @@ class BreakfastController extends Controller
      */
     public function store(Request $request)
     {
-      $breakfast = new breakfast();
-      $breakfast->Bname = Input::get('Bname');
-      $breakfast->Bcalories = Input::get('Bcalories');
-      $breakfast->save();
-     return "adminInsert";
+      $contact = new contact();
+      $contact->name = Input::get('name');
+      $contact->email = Input::get('email');
+      $contact->message=Input::('message');
+      $contact->save();
+     return "success";
     }
 
     /**
@@ -77,7 +79,7 @@ class BreakfastController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
     }
 
     /**

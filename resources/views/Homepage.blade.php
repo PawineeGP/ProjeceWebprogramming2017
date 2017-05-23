@@ -130,22 +130,24 @@
                 <div class="modal-content">
                       <span class="close">&times;</span>
                   <div class="contact-info">
-                    <h1>contact me</h1>
-                      <h2>lorem ger vitae libero ac risus</h2>
+                    <h1>เขียนคำแนะนำสำหรับเรา</h1>
+                      <h2>คำแนะนำของท่านเราจะนำไปปรับปรุง</h2>
                       <!-- POST -->
-                      <form action="Homepage" mathod="post">
+                      <form action="contact" mathod="post">
                         <div class="controls">
-                          <input id="name" name="name" type="text" class="span5" placeholder="Name here..">
-                                    <input id="email" name="email" type="email" class="span5" placeholder="Email here..">
-                                </div>
-                                <div class="controls">
-                                    <textarea id="message" name="message" class="span5" placeholder="Message here.." rows="5"></textarea>
-                                </div>
-                                  <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                              <div class="controls">
-                                    <button id="contact-submit" type="submit" class="btn">Submit</button>
-                                </div>
-                            </form>
+                        <input id="name" name="name" type="text" class="span5" placeholder="NAME">
+                        <input id="email" name="email" type="email" class="span5" placeholder="E-mail">
+                        </div>
+                        <div class="controls">
+                          <textarea id="message" name="message" class="span5" placeholder="Message here.." rows="5"></textarea>
+                        </div>
+                          <div class="controls">
+                          <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        </div>
+                        <div class="controls">
+                          <button id="contact-submit" type="submit" class="btn">Submit</button>
+                        </div>
+                      </form>
 
                       </div>
 
@@ -171,7 +173,7 @@
                 </div>
               </div>
 
-              <a href="{{url('/cal')}}">
+              <a href="{{url('/food')}}" >
                 <div class="panel-footer">
                   <span class="pull-left">วันนี้คุณกินอะไรบ้าง</span>
                   <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

@@ -30,4 +30,10 @@ class HomeController extends Controller
       return view('calculator');
     }
 
+    public function foodcal()
+    {
+      return view('FoodCalculate');
+    }
+
+
 }

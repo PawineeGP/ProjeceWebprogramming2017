@@ -2,7 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\lunch;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
+use App\Http\Requests;
+use Illuminate\Support\Facades\View;
+use DB;
 
 class AdminController extends Controller
 {
@@ -34,7 +40,7 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
