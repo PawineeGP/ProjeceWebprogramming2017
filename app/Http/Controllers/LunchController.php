@@ -20,7 +20,8 @@ class LunchController extends Controller
      */
     public function index()
     {
-        return view("insertLunch");
+      $lunch=lunch::all();
+        return view("insertLunch",compact('lunch'));
     }
 
     /**
@@ -46,7 +47,7 @@ class LunchController extends Controller
        $lunch->Lname = Input::get('Lname');
        $lunch->Lcalories = Input::get('Lcalories');
        $lunch->save();
-      return redirect('adminInsert');
+      return redirect("/lunch");
 
     }
 
@@ -56,9 +57,10 @@ class LunchController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-
+      $lunch= lunch::all();
+      return view('insertLunch',['lunch'=> $lunch]);
     }
 
     /**

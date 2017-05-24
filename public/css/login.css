@@ -1,0 +1,18 @@
+body{
+  /*background: url(../img/bg-home.jpg); */
+  background-color: #f9f7d5;
+  margin-top: 90px;
+  margin-bottom: 50px;
+  padding: 60px
+
+ }
+ .panel{
+   background-color:#E1FD8E;
+   border-color:#FFBE7D;
+   border-radius: 5px;
+ }
+ .panel-heading{
+ }
+ .panel-body{
+   background-color: #F4EFAF;
+ }

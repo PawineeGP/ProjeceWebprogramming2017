@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Model\contact;
+use App\Models\contact;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Input;
@@ -19,7 +19,8 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+      $contact=contact::all();
+      return view("insertContact",compact('contact'));
     }
 
     /**
@@ -43,9 +44,9 @@ class ContactController extends Controller
       $contact = new contact();
       $contact->name = Input::get('name');
       $contact->email = Input::get('email');
-      $contact->message=Input::('message');
+      $contact->message=Input::get('message');
       $contact->save();
-     return "success";
+     return redirect('/home');
     }
 
     /**
@@ -54,9 +55,10 @@ class ContactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+      $contact=contact::all();
+      return view('insertContact',['contact'=>$contact]);
     }
 
     /**

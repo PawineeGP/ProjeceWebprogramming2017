@@ -19,6 +19,8 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <link rel="stylesheet" href="css/custom-styles.css">
       <link rel="stylesheet" href="css/bootstrap-responsive.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+
       <!-- css -->
       <!--  -->
       <link href="https://blackrockdigital.github.io/startbootstrap-sb-admin-2/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -50,9 +52,11 @@
 
 	<div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left" style="display:none" id="mySidebar">
 		<button class="w3-bar-item w3-button w3-large"onclick="w3_close()">&times;</button>
-			<a href="#" class="w3-bar-item w3-button">หน้าแรก</a>
-			<a href="#contact" class="w3-bar-item w3-button">คำนวนการรับประทานอาหาร</a>
-			<a href="#Menus" class="w3-bar-item w3-button">มนูแนะน</a>
+		<label for="data" class="w3-bar-item w3-button button2">ข้อมูลที่เกี่ยวข้อง</label>
+		<a href="http://women.trueid.net/detail/48074" class="w3-bar-item w3-button" target="_blank">ข้อมูลอาหารแคลอรี่ต่ำ</a>
+		<a href="https://www.honestdocs.co/table-of-calories-in-food-types" class="w3-bar-item w3-button" target="_blank">ข้อมูลจำนวนแคลอรีของอาหารชนิดต่างๆ่</a>
+    <a href="https://www.w3schools.com/" class="w3-bar-item w3-button" target="_blank">W3School</a>
+    <a href="https://laravel.com/" class="w3-bar-item w3-button" target="_blank">Laravel Framwwork</a>
 	</div>
 	<div zclass="w3-main" id="main">
 		<div class="w3-teal">
@@ -128,12 +132,13 @@
               <!-- start model #1 -->
               <div id="myModal" class="modal">
                 <div class="modal-content">
-                      <span class="close">&times;</span>
+                    <span class="close">&times;</span>
                   <div class="contact-info">
                     <h1>เขียนคำแนะนำสำหรับเรา</h1>
                       <h2>คำแนะนำของท่านเราจะนำไปปรับปรุง</h2>
                       <!-- POST -->
-                      <form action="contact" mathod="post">
+
+                      <form action="InsertContact" method="post">
                         <div class="controls">
                         <input id="name" name="name" type="text" class="span5" placeholder="NAME">
                         <input id="email" name="email" type="email" class="span5" placeholder="E-mail">
@@ -197,7 +202,7 @@
                 </div>
               </div>
 
-              <a href="{{url('/add')}}">
+              <a href="{{url('/addfood')}}">
                 <div class="panel-footer">
                   <span class="pull-left">เพิ่มเมนูอาหาร</span>
                   <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -220,7 +225,7 @@
                   </div>
                 </div>
               </div>
-              <a href="#">
+              <a href="{{url('/home')}}">
                 <div class="panel-footer">
                   <span class="pull-left">สถิติการรับประทานอาหาร</span>
                   <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -236,7 +241,8 @@
             <div class="col-lg-8">
               <div class="panel panel-default">
                 <div class="panel-heading">
-                   <i class="fa fa-bar-chart-o fa-fw"></i>สถิติการรับประทานอาหาร
+                   <!-- <i class="fa fa-bar-chart-o fa-fw"></i>สถิติการรับประทานอาหาร -->
+                   สถิติการรับประทานอาหาร
                     <div class="pull-right">
                       <div class="btn-group">
 
@@ -248,68 +254,96 @@
                 </div>  <!-- /.panel-body -->
               </div>
             </div>
-
           <!-- /chart  row-->
-          <div class="row">
           <div class="col-lg-4">
             <div class="panel panel-default">
               <div class="panel-heading">
                 <i class="fa fa-bell fa-fw"></i> เมนูแนะนำ
               </div>
               <!-- /.panel-heading -->
+
               <div class="panel-body">
-
-
-  <div class="panel-group" id="accordion">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Collapsible Group 1</a>
-        </h4>
-      </div>
-      <div id="collapse1" class="panel-collapse collapse in">
-        <div class="panel-body">Lorem ipsum d</div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Collapsible Group 2</a>
-        </h4>
-      </div>
-      <div id="collapse2" class="panel-collapse collapse">
-        <div class="panel-body">Lorem .</div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Collapsible Group 3</a>
-        </h4>
-      </div>
-      <div id="collapse3" class="panel-collapse collapse">
-        <div class="panel-body">Lorem </div>
-      </div>
-    </div>
-  </div>
-
-
-
+                <div class="panel-group" id="accordion">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <img src="img/checked.png" >
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">แกงส้ม</a>
+                      </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse in">
+                      <div class="panel-body">
+                        <img src="img/ks.png" width="200" height="200" style="border-radius:50px;margin-right:5px;" >
+                      <div class="">
+                        <br>
+                        <p><strong>&nbsp;แกงส้ม 1 ถ้วย ให้พลังงาน : 40 กิโลแคลอรี่</strong></p>
+                        <p>&nbsp;&nbsp;บอกเลยว่าเจ้าแกงส้มเนี่ยแคลอรี่น้อยแบบสุดๆไปเลยล่ะค่ะ เพราะให้พลังงานเพียงแค่ 40 แคลอรี่เท่านั้น <br>โอ้โห!
+                          ต่อให้ทานคู่กับข้าวสวยก็ยังไม่อ้วนอยู่ดีค่ะ สาวๆที่กำลังลดความอ้วนอยู่ ห้ามพลาดเด็ดขาดค่ะสำหรับเมนูนี้</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <img src="img/checked.png" alt="">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">แกงจืดเต้าหู้ไม่ใส่หมูสับ</a>
+                </h4>
+              </div>
+              <div id="collapse2" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <img src="img/ka.png" width="200" height="200" style="border-radius:50px;margin-right:5px;" >
+                    <div class="">
+                      <br>
+                      <p><strong>&nbsp;แกงจืดเต้าหู้ไม่ใส่หมูสับ 1 ถ้วย ให้พลังงาน : 80 กิโลแคลอรี่ ใส่หมูสับ 110 กิโลแคลอรี่่</strong></p>
+                      <p>&nbsp;&nbsp;บอกเลยยค่ะว่าเป็นเมนูสุดคลาสสิคที่ไม่ว่าบ้านไหนๆก็ทำกินเองได้ไม่ยากค่ะ จะเคร่งครัดหน่อย ไม่ใส่หมูสับก็ยังอร่อยอยู่ค่ะ
+                      หรือจะเพิ่มหมูสับมาสักนิด ก็ไม่ได้ทำให้อ้วนขึ้นสักเท่าไหร่ค่ะ ทั้งอิ่มอร่อยชุ่มคอ จำไว้แล้วทำกินเย็นนี้เลย!้</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <img src="img/checked.png" >
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">ไข่ต้ม</a>
+                  </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <img src="img/egg.png" width="200" height="200" style="border-radius:50px;margin-right:5px;" >
+                      <div class="">
+                      <br>
+                        <p><strong>&nbsp;ไข่ต้ม 1 ฟอง ให้พลังงาน:75 กิโลแคลอรี่่่</strong></p>
+                        <p>&nbsp;&nbsp;  ขาดไม่ได้จริงๆค่ะสำหรับ ไข่ต้ม ที่ทั้งอยู่ท้องแถมยังให้แคลอรี่ที่น้อย
+                        ที่สำคัญกว่าสิ่งอื่นไหนก็คือหาทานง่ายค่ะ ไม่ต้องเหนื่อยทำอาหารก็ผอมได้ค่ะสาวๆ้</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div> <!-- /row chart-->
-
-
-
-
+        </div>
+      </div>
     </div> <!--wrapper-->
-  </div> <!-- /w3-main -->
-
-
-
-
+    <div class="col-md-12 page-body margin-top-50 footer">
+    <footer>
+      <br>
+      <center>
+      <p>©Webprogrammig 2017 |CSUBU</p>
+      <p><strong>Design By :</strong>Pawinee Purachanai (GIGIE) </p>
+      <div class="uipasta-credit"> THANK :  <a href="http://www.uipasta.com" target="_blank">UiPasta</a></div>
+    </center>
+    </footer>
+  </div>
+</div> <!-- /w3-main -->
 <!-- script -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/plugin.js"></script>
+
+   <!-- Main Javascript File  -->
+   <script type="text/javascript" src="js/scripts.js"></script>
 <script>
 function w3_open() {
   document.getElementById("main").style.marginLeft = "25%";

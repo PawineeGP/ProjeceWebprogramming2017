@@ -33,7 +33,7 @@
                 <div class="col-lg-12">
                   <div class="intro-message">
                         <h1>WELCOME TO</h1>
-                        <h3>FIGHT FOR HEALTH</h3>
+                        <h3>-: CHECK :-</h3>
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
                         </ul>

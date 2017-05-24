@@ -18,7 +18,8 @@ class BreakfastController extends Controller
      */
     public function index()
     {
-      return view("insertBreak");
+      $breakfast=breakfast::all();
+      return view("insertBreak",compact('breakfast'));
     }
 
     /**
@@ -43,7 +44,7 @@ class BreakfastController extends Controller
       $breakfast->Bname = Input::get('Bname');
       $breakfast->Bcalories = Input::get('Bcalories');
       $breakfast->save();
-     return "adminInsert";
+     return redirect( '/break');
     }
 
     /**
@@ -52,9 +53,10 @@ class BreakfastController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+      $breakfast= breakfast::all();
+      return view('insertBreak',['breakfast'=> $breakfast]);
     }
 
     /**

@@ -19,7 +19,7 @@
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    height:75%;
+    height:87%;
     background-color:#FF4500;
 
 }
@@ -98,5 +98,33 @@ ul.showInColumn li{
     list-style:none;
     display:block;
     float:left;
+}
+.result{
+  margin:16px;
+  padding: 0px;
+  width:95%;
+  height:70%;
+  font-size: 25px;
+}
+.total{
+  width:70%;
+}
+.menu img{
+width: 300px; /* ความกว้าง */
+height: 250px; /* ความสูง */
+-moz-border-radius: 80px;
+-webkit-border-radius: 80px;
+border-radius:30px;
+margin: 30px;
+padding: 10px;
+}
+.form-set{
+  margin: 0px;
+  padding: 0px;
+}
+
+.footter{
+  background: gray;
+  color: #FFF;
 
 }

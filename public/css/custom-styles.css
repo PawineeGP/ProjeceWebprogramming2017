@@ -181,23 +181,23 @@ font-size: 15px;
   .portfolio-block .links a{background: #545454; padding: 5px 12px; color: #d2b383; margin-right: 5px;
                      font-family: 'fjalla_oneregular'; border-radius: 3px;}
 
-  .portfolio-block .links a:hover{background: #c2a270; color: #1b1b1b; text-decoration: none;}
-  .portfolio-block ul{margin-top: 40px; margin-bottom: 0;}
-  .portfolio-block ul li{list-style: none; display: inline-block; margin-bottom: 30px; margin-left: 0; margin-right: 30px;}
-  .contact-info{padding:85px; text-transform: uppercase; background: #1b1b1b; border-top: 1px solid #292929;
-               text-align: center; }
-  .contact-info h1{font-size: 30px; line-height: 34px; color: #c2a270; text-transform: uppercase; font-family: 'fjalla_oneregular';
-                     font-weight: normal; padding-bottom: 15px; letter-spacing: 1px;}
-  .contact-info h2{font-size: 20px; line-height: 30px; color: #626262; font-family: 'source_sans_prolight'; padding-bottom: 30px; font-weight: normal;}
+                     .portfolio-block .links a:hover{background: #c2a270; color: #1b1b1b; text-decoration: none;}
+                     .portfolio-block ul{margin-top: 40px; margin-bottom: 0;}
+                     .portfolio-block ul li{list-style: none; display: inline-block; margin-bottom: 30px; margin-left: 0; margin-right: 30px;}
+                     .contact-info{padding: 35px; text-transform: uppercase; background: #fff; border-top: 1px solid #292929;
+                                  text-align: center; }
+                     .contact-info h1{font-size: 30px; line-height: 34px; color: #c2a270; text-transform: uppercase; font-family: 'fjalla_oneregular';
+                                        font-weight: normal; padding-bottom: 15px; letter-spacing: 1px;}
+                     .contact-info h2{font-size: 20px; line-height: 30px; color: #626262; font-family: 'source_sans_prolight'; padding-bottom: 30px; font-weight: normal;}
 
-  .contact-info form input[type="text"], input[type="email"], textarea{background: #1b1b1b; border: 1px solid #292929;
-                  color: #c2a270;  margin-bottom: 20px;}
-  .contact-info form input[type="text"]{margin-right: 12px; min-height: 38px; font-family: 'source_sans_proregular';}
-  .contact-info form input[type="email"]{min-height: 38px; font-family: 'source_sans_proregular';}
-  .contact-info form textarea{margin-bottom: 20px; font-family: 'source_sans_proregular';}
-  .contact-info form .btn{background: #E1FD8E; color: #1b1b1b; font-size: 18px; line-height: 22px; font-family: 'fjalla_oneregular';
-                        padding: 8px; text-shadow: none; text-transform: uppercase; border-bottom: none; }
-  .contact-info form .btn:hover{background: #545454; color: #c2a270;}
+                     .contact-info form input[type="text"], input[type="email"], textarea{background: #FFF; border: 1px solid #292929;
+                                     color: #5d5d5d;  margin-bottom: 20px;}
+                     .contact-info form input[type="text"]{margin-right: 12px; min-height: 38px; font-family: 'source_sans_proregular';}
+                     .contact-info form input[type="email"]{min-height: 38px; font-family: 'source_sans_proregular';}
+                     .contact-info form textarea{margin-bottom: 20px; font-family: 'source_sans_proregular';}
+                     .contact-info form .btn{background: #c2a270; color: #1b1b1b; font-size: 18px; line-height: 22px; font-family: 'fjalla_oneregular';
+                                           padding: 8px; text-shadow: none; text-transform: uppercase; border-bottom: none; }
+                     .contact-info form .btn:hover{background: #545454; color: #fff;}
 /* ==========================================================================
    Sidebar styles starts here
    ========================================================================== */

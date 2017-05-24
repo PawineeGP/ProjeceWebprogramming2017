@@ -19,7 +19,8 @@ class DinnerController extends Controller
      */
     public function index()
     {
-      return view("insertDinner");
+      $dinner=dinner::all();
+      return view("insertDinner",compact('dinner'));
     }
 
     /**
@@ -44,7 +45,7 @@ class DinnerController extends Controller
       $dinner->Dname = Input::get('Dname');
       $dinner->Dcalories = Input::get('Dcalories');
       $dinner->save();
-     return "seccess";
+     return redirect("/dinner");
     }
 
     /**
@@ -53,9 +54,10 @@ class DinnerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+      $dinner= dinner::all();
+      return view('insertDinner',['dinner'=> $dinner]);
     }
 
     /**
